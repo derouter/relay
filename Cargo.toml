@@ -4,3 +4,18 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+clap = { version = "4.5.35", features = ["derive"] }
+eyre = "0.6.12"
+hex = "0.4.3"
+libp2p = { version = "0.55.0", features = [
+  "tokio",
+  "noise",
+  "macros",
+  "ping",
+  "tcp",
+  "identify",
+  "yamux",
+  "relay",
+  "quic",
+] }
+tokio = { version = "1.44.2", features = ["rt-multi-thread", "macros"] }
